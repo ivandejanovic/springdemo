@@ -9,4 +9,8 @@ Application has spring, spring security and logging already setup. You are provi
 
 It should be relatively simple to extend it further.
 
+Users set in application are:
+demouser/demopass
+userdemo/passdemo
+
 
