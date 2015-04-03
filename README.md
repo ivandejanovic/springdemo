@@ -7,6 +7,6 @@ You can simply download this application to your computer, import it into you fa
 
 Application has spring, spring security and logging already setup. You are provided with main controller which you can remove, an index page, login page, logout page and several error pages.
 
-It should be relatively simple to extend it fuurther.
+It should be relatively simple to extend it further.
 
 
