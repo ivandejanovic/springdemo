@@ -5,7 +5,7 @@ This boilerplate application is designed for people new to web development in Ja
 
 You can simply download this application to your computer, import it into you favorite IDE, build it and deploy it. It will run with basic functionality.
 
-Application has spring, spring security and logging already setup. You are provided with main controller which you can remove, an index page, login page, logout page and several error pages.
+Application has spring, spring security and logging already setup. You are provided with main controller and service which you can remove, an index page, login page, logout page and several error pages.
 
 It should be relatively simple to extend it further.
 
