@@ -14,5 +14,8 @@
     <div>
       Spring demo app. You can just start adding your code.
     </div>
+    <div>
+      Message from service: ${message}
+    </div>
   </body>
 </html>

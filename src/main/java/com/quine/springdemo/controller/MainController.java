@@ -1,12 +1,18 @@
 package com.quine.springdemo.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.quine.springdemo.service.MainService;
 
 /**
  * @author Ivan Dejanovic
@@ -16,12 +22,18 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class MainController {
     private final static org.slf4j.Logger logger = LoggerFactory.getLogger(MainController.class);
+    
+    @Autowired
+    private MainService mainService;
 
     @RequestMapping("/index.htm")
     public ModelAndView index(HttpServletRequest request, HttpServletResponse response) throws Exception {
         logger.info("Getting index.htm");
+        
+        Map<String, String> model = new HashMap<String, String>();
+        model.put("message", mainService.retrieveMessage());
 
-        return new ModelAndView("jsp/index.jsp");
+        return new ModelAndView("jsp/index.jsp", model);
     }
 
     @RequestMapping("/login.htm")
