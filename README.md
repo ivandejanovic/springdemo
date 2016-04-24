@@ -13,6 +13,6 @@ Users set in application are:
 demouser/demopass
 userdemo/passdemo
 
-You can read a short explanation of the application on my blog: http://ivandejanovic.blogspot.com/2015/04/starting-java-web-development-with.html
+You can read a short explanation of the application on my blog: http://ivandejanovic.blogspot.rs/2016/04/starting-java-web-development-with.html
 
 
