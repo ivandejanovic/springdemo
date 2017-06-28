@@ -9,10 +9,10 @@ Application has spring, spring security and logging already setup. You are provi
 
 It should be relatively simple to extend it further.
 
+Application also comes with a simple docker setup should you choose to run it inside docker container.
+
 Users set in application are:
 demouser/demopass
 userdemo/passdemo
 
 You can read a short explanation of the application on my blog: http://ivandejanovic.blogspot.rs/2016/04/starting-java-web-development-with.html
-
-
