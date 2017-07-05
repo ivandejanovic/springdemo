@@ -4,12 +4,17 @@ $(function() {
 });
 
 function create(name, origin) {
-	$.post("/springdemo/api/whisky/", JSON.stringify({
-		name : name,
-		origin : origin
-	}), function() {
+	$.ajax({
+		method : "POST",
+		url : "/springdemo/api/whisky/",
+		contentType: "application/json",
+		data : JSON.stringify({
+			name : name,
+			origin : origin
+		})
+	}).done(function() {
 		load();
-	}, "json");
+	});
 }
 
 function remove(id) {
@@ -25,6 +30,7 @@ function update(id, name, origin) {
 	$.ajax({
 		method : "PUT",
 		url : "/springdemo/api/whisky/" + id,
+		contentType: "application/json",
 		data : JSON.stringify({
 			name : name,
 			origin : origin
