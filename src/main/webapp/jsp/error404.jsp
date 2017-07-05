@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Spring Demo</title>
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="static/css/reset.css">
   </head>
   <body>
     <div class="page_container">
