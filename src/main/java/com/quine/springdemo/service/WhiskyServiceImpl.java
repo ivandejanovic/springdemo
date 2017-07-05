@@ -3,9 +3,8 @@
  */
 package com.quine.springdemo.service;
 
-import java.util.ArrayList;
 import java.util.LinkedHashMap;
-import java.util.List;
+import java.util.Collection;
 import java.util.Map;
 
 import javax.annotation.PostConstruct;
@@ -34,10 +33,10 @@ public class WhiskyServiceImpl implements WhiskyService {
 	}
 
 	@Override
-	public List<Whisky> getAll() {
+	public Collection<Whisky> getAll() {
 		logger.info("Invoking getAll.");
 		
-		return new ArrayList<Whisky>(products.values());
+		return products.values();
 	}
 
 	/*

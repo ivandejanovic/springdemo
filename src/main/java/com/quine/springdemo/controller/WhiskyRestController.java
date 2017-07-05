@@ -3,7 +3,7 @@
  */
 package com.quine.springdemo.controller;
 
-import java.util.List;
+import java.util.Collection;
 
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +35,7 @@ public class WhiskyRestController {
 
 	@RequestMapping(method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
-	public List<Whisky> findAll() {
+	public Collection<Whisky> findAll() {
 		logger.info("Rest whisky get all");
 		
 		return service.getAll();

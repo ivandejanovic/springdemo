@@ -3,7 +3,7 @@
  */
 package com.quine.springdemo.service;
 
-import java.util.List;
+import java.util.Collection;
 
 import com.quine.springdemo.entity.Whisky;
 
@@ -13,7 +13,7 @@ import com.quine.springdemo.entity.Whisky;
  * @version 1.0
  */
 public interface WhiskyService {
-	List<Whisky> getAll();
+	Collection<Whisky> getAll();
 
 	Whisky getById(int id);
 	
