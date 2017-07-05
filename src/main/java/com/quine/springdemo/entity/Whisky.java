@@ -13,7 +13,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class Whisky {
 	private static final AtomicInteger COUNTER = new AtomicInteger();
 
-	private final int id;
+	private int id;
 
 	private String name;
 
@@ -39,6 +39,10 @@ public class Whisky {
 
 	public int getId() {
 		return id;
+	}
+	
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public void setName(String name) {
