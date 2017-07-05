@@ -19,7 +19,7 @@ public interface WhiskyService {
 	
 	Whisky save(Whisky whisky);
 	
-	Whisky update (Whisky update);
+	void update (Whisky update);
 	
 	void deleteById(int id);
 }

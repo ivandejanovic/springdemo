@@ -52,18 +52,20 @@ public class WhiskyRestController {
 	@RequestMapping(method = RequestMethod.POST)
 	@ResponseStatus(HttpStatus.CREATED)
 	@ResponseBody
-	public Whisky create(@RequestBody Whisky resource) {
+	public Whisky create(@RequestBody Whisky whisky) {
 		logger.info("Rest whisky post");
 		
-		return service.save(resource);
+		return service.save(whisky);
 	}
 
 	@RequestMapping(value = "{id}", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseStatus(HttpStatus.OK)
-	public Whisky update(@PathVariable("id") int id, @RequestBody Whisky resource) {
+	public void update(@PathVariable("id") int id, @RequestBody Whisky whisky) {
 		logger.info("Rest whisky put");
 		
-		return service.update(resource);
+		whisky.setId(id);
+		
+		service.update(whisky);
 	}
 
 	@RequestMapping(value = "{id}", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE)

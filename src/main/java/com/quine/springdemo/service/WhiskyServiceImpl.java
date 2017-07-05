@@ -39,52 +39,32 @@ public class WhiskyServiceImpl implements WhiskyService {
 		return products.values();
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.quine.springdemo.service.WhiskyService#getById(int)
-	 */
 	@Override
 	public Whisky getById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		logger.info("Invoking getById.");
+		
+		return products.get(id);
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * com.quine.springdemo.service.WhiskyService#save(com.quine.springdemo.
-	 * entity.Whisky)
-	 */
 	@Override
 	public Whisky save(Whisky whisky) {
-		// TODO Auto-generated method stub
-		return null;
+		logger.info("Invoking save.");
+		
+		return products.putIfAbsent(whisky.getId(), whisky);
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * com.quine.springdemo.service.WhiskyService#update(com.quine.springdemo.
-	 * entity.Whisky)
-	 */
 	@Override
-	public Whisky update(Whisky update) {
-		// TODO Auto-generated method stub
-		return null;
+	public void update(Whisky whisky) {
+		logger.info("Invoking update.");
+		
+		products.put(whisky.getId(), whisky);
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.quine.springdemo.service.WhiskyService#deleteById(int)
-	 */
 	@Override
 	public void deleteById(int id) {
-		// TODO Auto-generated method stub
-
+		logger.info("Invoking delete.");
+		
+		products.remove(id);
 	}
 
 }
