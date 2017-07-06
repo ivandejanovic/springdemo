@@ -9,7 +9,7 @@
   <body>
     <div>
       <form name='f' action='/springdemo/login' method='POST' class="login_container">
-        <!-- <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> --> 
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         <table>
           <tr><td>User:</td><td><input type='text' name='username' value=''></td></tr>
           <tr><td>Password:</td><td><input type='password' name='password'/></td></tr>
