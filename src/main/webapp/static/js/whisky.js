@@ -4,7 +4,10 @@ $(function() {
 });
 
 function create(name, origin) {
+	var token = $("meta[name='_csrf']").attr("content");
+	var header = $("meta[name='_csrf_header']").attr("content");
 	$.ajax({
+		headers: {[header]: token},
 		method : "POST",
 		url : "/springdemo/api/whisky/",
 		contentType: "application/json",
@@ -18,7 +21,10 @@ function create(name, origin) {
 }
 
 function remove(id) {
+	var token = $("meta[name='_csrf']").attr("content");
+	var header = $("meta[name='_csrf_header']").attr("content");
 	$.ajax({
+		headers: {[header]: token},
 		method : "DELETE",
 		url : "/springdemo/api/whisky/" + id
 	}).done(function() {
@@ -27,7 +33,10 @@ function remove(id) {
 }
 
 function update(id, name, origin) {
+	var token = $("meta[name='_csrf']").attr("content");
+	var header = $("meta[name='_csrf_header']").attr("content");
 	$.ajax({
+		headers: {[header]: token},
 		method : "PUT",
 		url : "/springdemo/api/whisky/" + id,
 		contentType: "application/json",

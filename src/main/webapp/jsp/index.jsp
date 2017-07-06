@@ -4,6 +4,10 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="_csrf" content="${_csrf.token}"/>
+	<!-- default header name is X-CSRF-TOKEN -->
+	<meta name="_csrf_header" content="${_csrf.headerName}"/>
+	
     <title>Spring Demo</title>
     <link rel="stylesheet" href="static/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -13,7 +17,10 @@
   </head>
   <body>
     <div>
-      <a id="logout" title="Logout" href="logout">Logout</a>
+      <form action="logout">
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+        <input type="submit" value="logout">
+      </form>
     </div>
     <div>
       Spring demo app. You can just start adding your code.
