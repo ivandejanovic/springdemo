@@ -13,7 +13,7 @@
   </head>
   <body>
     <div>
-      <a id="logout" title="Logout" href="j_spring_security_logout">Logout</a>
+      <a id="logout" title="Logout" href="logout">Logout</a>
     </div>
     <div>
       Spring demo app. You can just start adding your code.
