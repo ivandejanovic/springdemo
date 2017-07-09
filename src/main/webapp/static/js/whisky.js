@@ -130,3 +130,14 @@ function initModal() {
 		}
 	})
 }
+
+function ajaxLogout1() {
+var header = createHeader();
+	
+	$.ajax({
+		headers: header,
+		method : "POST",
+		url : "/springdemo/logout"
+	}).done(function() {
+	});
+}
