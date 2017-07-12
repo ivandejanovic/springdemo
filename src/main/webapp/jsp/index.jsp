@@ -11,28 +11,13 @@
     <title>Spring Demo</title>
     <link rel="stylesheet" href="static/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-3.2.1.min.js"></script>
     <script	type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script	type="text/javascript" src="static/js/whisky.js"></script>
   </head>
   <body>
     <div>
-      <a href="logout">Logout no csrf</a>
-    </div>
-    <div>
-      <form action="logout">
-        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-        <input type="submit" value="form logout 1">
-      </form>
-    </div>
-    <div>
-      <form action="<%=request.getContextPath()%>/appLogout" method="POST">
-	     <input type="submit" value="form Logout 2"/>
-	     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>		
-	  </form>
-    </div>
-    <div>
-      <button onclick="ajaxLogout1()">Ajax Logout 1</button>
+      <button onclick="ajaxLogout()">logout</button>
     </div>
     <div>
       Spring demo app. You can just start adding your code.
