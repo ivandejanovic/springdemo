@@ -131,13 +131,14 @@ function initModal() {
 	})
 }
 
-function ajaxLogout1() {
+function ajaxLogout() {
 var header = createHeader();
 	
 	$.ajax({
 		headers: header,
 		method : "POST",
 		url : "/springdemo/logout"
-	}).done(function() {
+	}).done(function(data) {
+		console.log("data: " + data);
 	});
 }
