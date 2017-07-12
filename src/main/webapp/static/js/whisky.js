@@ -132,7 +132,7 @@ function initModal() {
 }
 
 function ajaxLogout() {
-var header = createHeader();
+	var header = createHeader();
 	
 	$.ajax({
 		headers: header,
