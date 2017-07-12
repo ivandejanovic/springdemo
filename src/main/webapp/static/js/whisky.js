@@ -139,6 +139,6 @@ function ajaxLogout() {
 		method : "POST",
 		url : "/springdemo/logout"
 	}).done(function(data) {
-		console.log("data: " + data);
+		window.location = "/springdemo/loggedout.htm";
 	});
 }
