@@ -22,7 +22,7 @@
     <junit.version>4.12</junit.version>
     <logback.version>1.2.3</logback.version>
     <jcl-over-slf4j.version>1.7.21</jcl-over-slf4j.version>
-    <jackson.version>2.9.7</jackson.version>
+    <jackson.version>2.9.10</jackson.version>
   </properties>
 
   <dependencies>
