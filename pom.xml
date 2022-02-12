@@ -9,20 +9,20 @@
   <url>http://maven.apache.org</url>
 
   <properties>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
     <encoding>UTF-8</encoding>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     
     <jee.version>7.0</jee.version>
     
-    <spring.version>4.3.21.RELEASE</spring.version>
-    <spring.security.version>4.2.3.RELEASE</spring.security.version>
+    <spring.version>5.3.15</spring.version>
+    <spring.security.version>5.6.1</spring.security.version>
     <jstl.version>1.2</jstl.version>
-    <junit.version>4.12</junit.version>
-    <logback.version>1.2.3</logback.version>
-    <jcl-over-slf4j.version>1.7.21</jcl-over-slf4j.version>
-    <jackson.version>2.10.1</jackson.version>
+    <junit.version>4.13.2</junit.version>
+    <logback.version>1.2.10</logback.version>
+    <jcl-over-slf4j.version>1.7.36</jcl-over-slf4j.version>
+    <jackson.version>2.13.1</jackson.version>
   </properties>
 
   <dependencies>
@@ -45,7 +45,7 @@
 
     <!-- jstl -->
     <dependency>
-      <groupId>jstl</groupId>
+      <groupId>javax.servlet</groupId>
       <artifactId>jstl</artifactId>
       <version>${jstl.version}</version>
     </dependency>
@@ -151,6 +151,12 @@
         <configuration>
           <path>/springdemo</path>
         </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.3.2</version>
       </plugin>
 
     </plugins>
