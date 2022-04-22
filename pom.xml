@@ -16,7 +16,7 @@
     
     <jee.version>7.0</jee.version>
     
-    <spring.version>5.3.18</spring.version>
+    <spring.version>5.3.19</spring.version>
     <spring.security.version>5.6.1</spring.security.version>
     <jstl.version>1.2</jstl.version>
     <junit.version>4.13.2</junit.version>
